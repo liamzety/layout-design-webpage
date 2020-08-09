@@ -7,20 +7,20 @@
   src: url(./fonts/lato-regular.ttf);
 }
 
-* {
+*,
+*:visited {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   text-decoration: none;
-}
-a:visited {
+  outline: none;
   color: #818181;
 }
 
 html {
   color: #606060;
   font-family: lato-regular, serif;
-  line-height: 20px;
+  line-height: 1.5;
   letter-spacing: 0.48px;
 }
 
@@ -34,9 +34,7 @@ input {
 
 header {
   width: 100%;
-
   background-color: #292929;
-  height: 130px;
   box-shadow: inset 0 -6px 0 #1e1e1e;
 }
 header .container {
@@ -98,7 +96,6 @@ button {
   border-width: 0;
   border-top: 0;
   border-left: 1px solid rgb(27, 27, 27);
-  border-bottom: 4px solid rgb(27, 27, 27);
 }
 .nav-links button:last-child:not(.hamburger-icon) {
   border-right: 1px solid rgb(27, 27, 27);
@@ -106,7 +103,10 @@ button {
 
 .nav-links button:hover {
   color: #58c93a;
-  border-bottom: 4px solid #58c93a;
+}
+.nav-links button:focus {
+  color: #58c93a;
+  box-shadow: inset 0 -5px #58c93a;
 }
 
 .dropbtn {
@@ -217,22 +217,28 @@ input:hover {
   margin-bottom: 30px;
 }
 .card-btn {
-  width: 50%;
+  font-size: 1rem;
+  position: relative;
+  width: fit-content;
+  padding: 0 15px;
   height: 2.5rem;
   border: 2px solid #c2c2c2;
   border-radius: 30px;
   background-color: inherit;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  transition: padding-right 0.3s;
 }
 .card-btn:hover {
+  padding-right: 45px;
   color: #58c93a;
   border-color: #58c93a;
 }
 
 .card-btn:hover::after {
+  position: absolute;
+  right: 15px;
   content: ' →';
 }
 .page-select {
@@ -320,8 +326,7 @@ footer i:hover {
     max-width: 700px;
   }
   .card img {
-    width: 100%;
-    object-fit: cover;
+    flex: 1;
     margin-bottom: 50px;
   }
 }
