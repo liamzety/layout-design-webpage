@@ -18,7 +18,6 @@
   <body>
     <div class="info-modal-wrapper">
       <section class="info-modal">
-        <button onclick="toggleModalInfo()">X</button>
         <h2>Join us to get access to the latest stories!</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, impedit?
@@ -27,27 +26,54 @@
           minus expedita cupiditate soluta, exercitationem quod incidunt cumque
           hic perspiciatis rem quae animi?
         </p>
-        <input placeholder="eg. email@email.com" type="email" />
-        <button>Submit</button>
+
+        <form class="container flex space-between" action="">
+          <label for="emailInput">Enter your email for more details.</label>
+          <input
+            placeholder="eg. email@email.com"
+            type="email"
+            id="emailInput"
+            required
+          />
+          <button class="card-btn">Submit</button>
+        </form>
+
+        <button onclick="toggleModalInfo()" class="card-btn">Close</button>
       </section>
     </div>
     <header>
       <div class="container flex space-between">
         <div class="logo">Blogin<span>.</span></div>
         <div class="flex nav-links">
-          <button>Journal</button>
+          <div class="dropdown">
+            <button class="dropbtn">Journal</button>
+            <div class="dropdown-content">
+              <a href="#"> October 2016 </a>
+              <a href="#">January 2017</a>
+              <a hrefs="#"> April 2017</a>
+              <a href="#"> July 2017</a>
+            </div>
+          </div>
           <button>About</button>
           <button>Work</button>
           <button>Contact</button>
         </div>
-        <button onclick="toggleHamburgerMenu()" class="hamburger-icon">
+        <button onclick="toggleHamburgerMenu(this)" class="hamburger-icon">
           ☰
         </button>
       </div>
     </header>
-    <section class="hamburger-container">
-      <div class="hamburger-menu">
-        <button>Journal</button>
+    <section class="hamburger-container ">
+      <div class="hamburger-menu flex space-between">
+        <div class="dropdown mobile container">
+          <button onclick="onDropDown()" class="dropbtn mobile">Journal</button>
+          <div class="dropdown-content dropdown-content-mobile">
+            <a href="#"> October 2016 </a>
+            <a href="#">January 2017</a>
+            <a href="#"> April 2017</a>
+            <a href="#"> July 2017</a>
+          </div>
+        </div>
         <button>About</button>
         <button>Work</button>
         <button>Contact</button>
@@ -141,16 +167,23 @@
     </footer>
 
     <script>
-      const toggleHamburgerMenu = () => {
-        document.querySelector('.hamburger-container').classList.toggle('show');
+      const toggleHamburgerMenu = (elBtn) => {
+        document.querySelector(".hamburger-container").classList.toggle("show");
         document
-          .querySelector('header')
-          .classList.toggle('header-on-hamburger');
+          .querySelector("header")
+          .classList.toggle("header-on-hamburger");
+
+        if (elBtn.innerText === "☰") elBtn.innerText = "X";
+        else if (elBtn.innerText === "X") elBtn.innerText = "☰";
       };
 
       const toggleModalInfo = () => {
-        document.querySelector('.info-modal-wrapper').classList.toggle('show');
+        document.querySelector(".info-modal-wrapper").classList.toggle("show");
       };
+
+      const onDropDown = () => {
+        document.querySelector('.dropdown-content-mobile').classList.toggle("show-dropdown");
+      }
     </script>
   </body>
 </html>
