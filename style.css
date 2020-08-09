@@ -1,10 +1,10 @@
 @font-face {
   font-family: logo;
-  src: url(/fonts/eurof55.ttf);
+  src: url(./fonts/eurof55.ttf);
 }
 @font-face {
   font-family: lato-regular;
-  src: url(/fonts/lato-regular.ttf);
+  src: url(./fonts/lato-regular.ttf);
 }
 
 * {
@@ -226,7 +226,7 @@ input:hover {
   border-color: #58c93a;
 }
 .card-btn:hover::after {
-  content: " →";
+  content: ' →';
 }
 .page-select {
   border-left: 1px solid #e1e0e0;
@@ -375,4 +375,3 @@ footer i:hover {
     opacity: 1;
   }
 }
-
