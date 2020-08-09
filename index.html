@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogin</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/62b99758ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+  </head>
+  <body>
+    <div class="info-modal-wrapper">
+      <section class="info-modal">
+        <button onclick="toggleModalInfo()">X</button>
+        <h2>Join us to get access to the latest stories!</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, impedit?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          architecto deserunt maxime neque earum ab, nesciunt reprehenderit
+          minus expedita cupiditate soluta, exercitationem quod incidunt cumque
+          hic perspiciatis rem quae animi?
+        </p>
+        <input placeholder="eg. email@email.com" type="email" />
+        <button>Submit</button>
+      </section>
+    </div>
+    <header>
+      <div class="container flex space-between">
+        <div class="logo">Blogin<span>.</span></div>
+        <div class="flex nav-links">
+          <button>Journal</button>
+          <button>About</button>
+          <button>Work</button>
+          <button>Contact</button>
+        </div>
+        <button onclick="toggleHamburgerMenu()" class="hamburger-icon">
+          ☰
+        </button>
+      </div>
+    </header>
+    <section class="hamburger-container">
+      <div class="hamburger-menu">
+        <button>Journal</button>
+        <button>About</button>
+        <button>Work</button>
+        <button>Contact</button>
+      </div>
+    </section>
+
+    <section class="main-cards container">
+      <div class="card flex">
+        <img src="https://picsum.photos/468/307" alt="" />
+        <div class="flex dir-column">
+          <h2>Duis aute irure dolor in henderit in voluptate.</h2>
+          <article>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </article>
+          <button onclick="toggleModalInfo()" class="card-btn">
+            Continue reading
+          </button>
+        </div>
+      </div>
+
+      <div class="card flex">
+        <img src="https://picsum.photos/468/307" alt="" />
+        <div class="flex dir-column">
+          <h2>Duis aute irure dolor in henderit in voluptate.</h2>
+          <article>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </article>
+          <button onclick="toggleModalInfo()" class="card-btn">
+            Continue reading
+          </button>
+        </div>
+      </div>
+
+      <div class="card flex">
+        <img src="https://picsum.photos/468/307" alt="" />
+        <div class="flex dir-column">
+          <h2>Duis aute irure dolor in henderit in voluptate.</h2>
+          <article>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </article>
+          <button onclick="toggleModalInfo()" class="card-btn">
+            Continue reading
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-select container flex space-between">
+      <a href="#"> ← Previous</a>
+      <a href="#"> Next →</a>
+    </section>
+
+    <footer>
+      <div class="container flex dir-column space-between">
+        <div class="logo">Blogin<span>.</span></div>
+        <p>
+          © 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+          <a href="#">Pixelhint.com</a>
+        </p>
+        <div class="flex space-between">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-behance"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggleHamburgerMenu = () => {
+        document.querySelector('.hamburger-container').classList.toggle('show');
+        document
+          .querySelector('header')
+          .classList.toggle('header-on-hamburger');
+      };
+
+      const toggleModalInfo = () => {
+        document.querySelector('.info-modal-wrapper').classList.toggle('show');
+      };
+    </script>
+  </body>
+</html>
