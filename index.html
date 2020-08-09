@@ -12,8 +12,6 @@
       src="https://kit.fontawesome.com/62b99758ab.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Box Icons -->
-    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
   </head>
   <body>
     <div class="info-modal-wrapper">
@@ -63,7 +61,7 @@
         </button>
       </div>
     </header>
-    <section class="hamburger-container ">
+    <section class="hamburger-container">
       <div class="hamburger-menu flex space-between">
         <div class="dropdown mobile container">
           <button onclick="onDropDown()" class="dropbtn mobile">Journal</button>
@@ -168,22 +166,28 @@
 
     <script>
       const toggleHamburgerMenu = (elBtn) => {
-        document.querySelector(".hamburger-container").classList.toggle("show");
         document
-          .querySelector("header")
-          .classList.toggle("header-on-hamburger");
+          .querySelector('.hamburger-container')
+          .classList.toggle('show-ham-menu');
+        document
+          .querySelector('header')
+          .classList.toggle('header-on-hamburger');
 
-        if (elBtn.innerText === "☰") elBtn.innerText = "X";
-        else if (elBtn.innerText === "X") elBtn.innerText = "☰";
+        if (elBtn.innerText === '☰') elBtn.innerText = 'X';
+        else if (elBtn.innerText === 'X') elBtn.innerText = '☰';
       };
 
       const toggleModalInfo = () => {
-        document.querySelector(".info-modal-wrapper").classList.toggle("show");
+        document
+          .querySelector('.info-modal-wrapper')
+          .classList.toggle('show-modal-info');
       };
 
       const onDropDown = () => {
-        document.querySelector('.dropdown-content-mobile').classList.toggle("show-dropdown");
-      }
+        document
+          .querySelector('.dropdown-content-mobile')
+          .classList.toggle('show-dropdown');
+      };
     </script>
   </body>
 </html>
